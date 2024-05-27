@@ -1,4 +1,10 @@
-# E-commerce Platform Functionalities
+# E-commerce Platform
+
+## Developed Using Laravel, Laravel Nova, Next.js, Python, Mysql and Tailwindcss
+
+## Description:
+
+    This repository is for an open-source e-commerce application built as a learning project to enhance developer skills in database management and e-commerce functionalities. The project is designed to be beginner-friendly and focuses on core functionalities like product management, user accounts, shopping cart, and checkout process (simulated payment processing for learning purposes). It explores the use of both MySQL and PostgreSQL databases, allowing developers to compare and understand their functionalities.
 
 ## Core Functionalities
 
