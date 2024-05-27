@@ -13,7 +13,7 @@ class BlogCategoryPolicy
      */
     public function viewAny(User $user): bool
     {
-        //
+        return $user->can("blog catageory");
     }
 
     /**
@@ -21,7 +21,7 @@ class BlogCategoryPolicy
      */
     public function view(User $user, BlogCategory $blogCategory): bool
     {
-        //
+        return $user->can("blog category details");
     }
 
     /**
@@ -29,7 +29,7 @@ class BlogCategoryPolicy
      */
     public function create(User $user): bool
     {
-        //
+        return $user->can("create blog category");
     }
 
     /**
@@ -37,7 +37,7 @@ class BlogCategoryPolicy
      */
     public function update(User $user, BlogCategory $blogCategory): bool
     {
-        //
+        return $user->can("update blog category");
     }
 
     /**
@@ -45,22 +45,6 @@ class BlogCategoryPolicy
      */
     public function delete(User $user, BlogCategory $blogCategory): bool
     {
-        //
-    }
-
-    /**
-     * Determine whether the user can restore the model.
-     */
-    public function restore(User $user, BlogCategory $blogCategory): bool
-    {
-        //
-    }
-
-    /**
-     * Determine whether the user can permanently delete the model.
-     */
-    public function forceDelete(User $user, BlogCategory $blogCategory): bool
-    {
-        //
+        return $user->can("delete blog category");
     }
 }

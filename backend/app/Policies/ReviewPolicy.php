@@ -13,7 +13,7 @@ class ReviewPolicy
      */
     public function viewAny(User $user): bool
     {
-        //
+        return $user->can("reviews");
     }
 
     /**
@@ -21,23 +21,7 @@ class ReviewPolicy
      */
     public function view(User $user, Review $review): bool
     {
-        //
-    }
-
-    /**
-     * Determine whether the user can create models.
-     */
-    public function create(User $user): bool
-    {
-        //
-    }
-
-    /**
-     * Determine whether the user can update the model.
-     */
-    public function update(User $user, Review $review): bool
-    {
-        //
+        return $user->can("view reviews details");
     }
 
     /**
@@ -45,7 +29,7 @@ class ReviewPolicy
      */
     public function delete(User $user, Review $review): bool
     {
-        //
+        return $user->can("delete reviews");
     }
 
     /**
@@ -53,7 +37,7 @@ class ReviewPolicy
      */
     public function restore(User $user, Review $review): bool
     {
-        //
+        return false;
     }
 
     /**
@@ -61,6 +45,6 @@ class ReviewPolicy
      */
     public function forceDelete(User $user, Review $review): bool
     {
-        //
+        return false;
     }
 }

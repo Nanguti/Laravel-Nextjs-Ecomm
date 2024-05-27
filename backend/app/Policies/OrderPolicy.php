@@ -13,7 +13,7 @@ class OrderPolicy
      */
     public function viewAny(User $user): bool
     {
-        //
+        return $user->can("view orders");
     }
 
     /**
@@ -21,7 +21,7 @@ class OrderPolicy
      */
     public function view(User $user, Order $order): bool
     {
-        //
+        return $user->can("view orders details");
     }
 
     /**
@@ -29,7 +29,7 @@ class OrderPolicy
      */
     public function create(User $user): bool
     {
-        //
+        return $user->can("create orders");
     }
 
     /**
@@ -37,15 +37,7 @@ class OrderPolicy
      */
     public function update(User $user, Order $order): bool
     {
-        //
-    }
-
-    /**
-     * Determine whether the user can delete the model.
-     */
-    public function delete(User $user, Order $order): bool
-    {
-        //
+        return $user->can("update orders");
     }
 
     /**
@@ -53,14 +45,6 @@ class OrderPolicy
      */
     public function restore(User $user, Order $order): bool
     {
-        //
-    }
-
-    /**
-     * Determine whether the user can permanently delete the model.
-     */
-    public function forceDelete(User $user, Order $order): bool
-    {
-        //
+        return $user->can("restore orders");
     }
 }

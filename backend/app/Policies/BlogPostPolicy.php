@@ -13,7 +13,7 @@ class BlogPostPolicy
      */
     public function viewAny(User $user): bool
     {
-        //
+        return $user->can("blog posts");
     }
 
     /**
@@ -21,7 +21,7 @@ class BlogPostPolicy
      */
     public function view(User $user, BlogPost $blogPost): bool
     {
-        //
+        return $user->can("blog posts details");
     }
 
     /**
@@ -29,7 +29,7 @@ class BlogPostPolicy
      */
     public function create(User $user): bool
     {
-        //
+        return $user->can("create blog posts");
     }
 
     /**
@@ -37,7 +37,7 @@ class BlogPostPolicy
      */
     public function update(User $user, BlogPost $blogPost): bool
     {
-        //
+        return $user->can("update blog posts");
     }
 
     /**
@@ -45,22 +45,6 @@ class BlogPostPolicy
      */
     public function delete(User $user, BlogPost $blogPost): bool
     {
-        //
-    }
-
-    /**
-     * Determine whether the user can restore the model.
-     */
-    public function restore(User $user, BlogPost $blogPost): bool
-    {
-        //
-    }
-
-    /**
-     * Determine whether the user can permanently delete the model.
-     */
-    public function forceDelete(User $user, BlogPost $blogPost): bool
-    {
-        //
+        return $user->can("delete blog posts");
     }
 }

@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Whishlist;
-use App\Http\Requests\StoreWhishlistRequest;
-use App\Http\Requests\UpdateWhishlistRequest;
+use App\Models\Wishlist;
+use App\Http\Requests\StoreWishlistRequest;
+use App\Http\Requests\UpdateWishlistRequest;
 
-class WhishlistController extends Controller
+class WishlistController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +27,7 @@ class WhishlistController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreWhishlistRequest $request)
+    public function store(StoreWishlistRequest $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class WhishlistController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Whishlist $whishlist)
+    public function show(Wishlist $whishlist)
     {
         //
     }
@@ -43,7 +43,7 @@ class WhishlistController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Whishlist $whishlist)
+    public function edit(Wishlist $whishlist)
     {
         //
     }
@@ -51,7 +51,7 @@ class WhishlistController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateWhishlistRequest $request, Whishlist $whishlist)
+    public function update(UpdateWishlistRequest $request, Wishlist $whishlist)
     {
         //
     }
@@ -59,7 +59,7 @@ class WhishlistController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Whishlist $whishlist)
+    public function destroy(Wishlist $whishlist)
     {
         //
     }

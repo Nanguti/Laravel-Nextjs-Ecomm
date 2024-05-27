@@ -13,7 +13,7 @@ class BlogCommentPolicy
      */
     public function viewAny(User $user): bool
     {
-        //
+        return $user->can("comments");
     }
 
     /**
@@ -21,23 +21,7 @@ class BlogCommentPolicy
      */
     public function view(User $user, BlogComment $blogComment): bool
     {
-        //
-    }
-
-    /**
-     * Determine whether the user can create models.
-     */
-    public function create(User $user): bool
-    {
-        //
-    }
-
-    /**
-     * Determine whether the user can update the model.
-     */
-    public function update(User $user, BlogComment $blogComment): bool
-    {
-        //
+        return $user->can("comment details");
     }
 
     /**
@@ -45,22 +29,7 @@ class BlogCommentPolicy
      */
     public function delete(User $user, BlogComment $blogComment): bool
     {
-        //
+        return $user->can("delete comments");
     }
 
-    /**
-     * Determine whether the user can restore the model.
-     */
-    public function restore(User $user, BlogComment $blogComment): bool
-    {
-        //
-    }
-
-    /**
-     * Determine whether the user can permanently delete the model.
-     */
-    public function forceDelete(User $user, BlogComment $blogComment): bool
-    {
-        //
-    }
 }

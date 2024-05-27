@@ -13,7 +13,7 @@ class CouponPolicy
      */
     public function viewAny(User $user): bool
     {
-        //
+        return $user->can("view coupons");
     }
 
     /**
@@ -21,7 +21,7 @@ class CouponPolicy
      */
     public function view(User $user, Coupon $coupon): bool
     {
-        //
+        return $user->can("view coupons details");
     }
 
     /**
@@ -29,7 +29,7 @@ class CouponPolicy
      */
     public function create(User $user): bool
     {
-        //
+        return $user->can("create coupons");
     }
 
     /**
@@ -37,7 +37,7 @@ class CouponPolicy
      */
     public function update(User $user, Coupon $coupon): bool
     {
-        //
+        return $user->can("update coupons");
     }
 
     /**
@@ -45,22 +45,6 @@ class CouponPolicy
      */
     public function delete(User $user, Coupon $coupon): bool
     {
-        //
-    }
-
-    /**
-     * Determine whether the user can restore the model.
-     */
-    public function restore(User $user, Coupon $coupon): bool
-    {
-        //
-    }
-
-    /**
-     * Determine whether the user can permanently delete the model.
-     */
-    public function forceDelete(User $user, Coupon $coupon): bool
-    {
-        //
+        return $user->can("delete coupons");
     }
 }
