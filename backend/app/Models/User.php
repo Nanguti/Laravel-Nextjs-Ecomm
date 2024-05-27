@@ -10,6 +10,10 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
+
+    const ROLE_USER = 'user';
+    const ROLE_ADMIN = 'admin';
+    
     use HasApiTokens, HasFactory, Notifiable;
 
     /**
@@ -21,6 +25,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'address',
+        'phone_number'
     ];
 
     /**
@@ -41,4 +47,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function reviews(){
+        return $this->hasMany(Review::class);
+    }
+    public function order(){
+        return $this->hasMany(Order::class);
+    }
+    public function whishlist(){
+        return $this->hasMany(Wishlist::class);
+    }
 }
