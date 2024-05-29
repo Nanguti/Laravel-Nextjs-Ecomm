@@ -1,6 +1,6 @@
 # E-commerce Platform
 
-## Developed Using Laravel, Laravel Nova, Next.js, Python, Mysql and Tailwindcss
+## Using Laravel, Laravel Nova, Next.js, Python, Mysql and Tailwindcss
 
 ## Description:
 
