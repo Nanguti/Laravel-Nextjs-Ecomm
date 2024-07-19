@@ -95,7 +95,3 @@ This repository is for an open-source e-commerce application built as a learning
 
 - **Allow third-party sellers to list products on your platform**
   - Requires additional features for seller management
-
-### Mobile App
-
-- **Develop a mobile app for a seamless shopping experience on smartphones**
