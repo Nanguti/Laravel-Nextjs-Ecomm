@@ -6,6 +6,8 @@
 
 This repository is for an open-source e-commerce application built as a learning project to enhance developer skills in database management and e-commerce functionalities. The project is designed to be beginner-friendly and focuses on core functionalities like product management, user accounts, shopping cart, and checkout process (simulated payment processing for learning purposes). It explores the use of both MySQL and PostgreSQL databases, allowing developers to compare and understand their functionalities.
 
+[Project Planning and Tracking Spreadsheet](https://docs.google.com/spreadsheets/d/1oPNISOXoENx_yERqEVc807WZ5SpVawMp_RiXMq3nAo8/edit?usp=sharing)
+
 ## Machine Learning Integration (Future Enhancements)
 
 This project explores the potential of integrating Machine Learning (ML) to personalize user experience and improve platform functionality. Here are some planned features for future development:
