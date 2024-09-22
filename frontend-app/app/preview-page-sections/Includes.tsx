@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import React from 'react';
+import { motion } from "framer-motion";
+import Image from "next/image";
+import React from "react";
 
-import Heading from '@/shared/Heading/Heading';
+import Heading from "@/shared/Heading/Heading";
 
 import {
   includesCardsData,
   templateDetails,
   templateIncludes,
-} from './content';
+} from "./content";
 
 const description = `${templateDetails.name} includes over 10+ pages 
 in total, with more than 20+ sections and in Poppins font`;
@@ -25,8 +25,8 @@ const SectionIncludes = () => {
       <div className="grid gap-5 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-12">
         {includesCardsData.map((DATA) => (
           <motion.div
-            initial={{ opacity: 0, y: '50%' }}
-            whileInView={{ opacity: 1, y: '0%' }}
+            initial={{ opacity: 0, y: "50%" }}
+            whileInView={{ opacity: 1, y: "0%" }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
             key={DATA.title}

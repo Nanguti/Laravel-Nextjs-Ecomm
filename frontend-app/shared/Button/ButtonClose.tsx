@@ -1,5 +1,5 @@
-import { XMarkIcon } from '@heroicons/react/24/solid';
-import React from 'react';
+import { XMarkIcon } from "@heroicons/react/24/solid";
+import React from "react";
 
 export interface ButtonCloseProps {
   className?: string;
@@ -8,13 +8,13 @@ export interface ButtonCloseProps {
 }
 
 const ButtonClose: React.FC<ButtonCloseProps> = ({
-  className = '',
-  IconclassName = 'w-5 h-5',
+  className = "",
+  IconclassName = "w-5 h-5",
   onClick = () => {},
 }) => {
   return (
     <button
-      className={`flex h-8 w-8 items-center  justify-center rounded-full
+      className={`flex h-8 w-8 items-center  justify-center rounded-lg
       hover:bg-neutral-700 ${className}`}
       onClick={onClick}
       type="button"

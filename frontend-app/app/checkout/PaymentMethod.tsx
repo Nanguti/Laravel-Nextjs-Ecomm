@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import type { FC } from 'react';
-import React, { useState } from 'react';
-import { FaPaypal, FaRegCreditCard } from 'react-icons/fa6';
-import { MdOutlineCreditScore } from 'react-icons/md';
+import type { FC } from "react";
+import React, { useState } from "react";
+import { FaPaypal, FaRegCreditCard } from "react-icons/fa6";
+import { MdOutlineCreditScore } from "react-icons/md";
 
-import ButtonPrimary from '@/shared/Button/ButtonPrimary';
-import ButtonSecondary from '@/shared/Button/ButtonSecondary';
-import FormItem from '@/shared/FormItem';
-import Input from '@/shared/Input/Input';
-import Radio from '@/shared/Radio/Radio';
+import ButtonPrimary from "@/shared/Button/ButtonPrimary";
+import ButtonSecondary from "@/shared/Button/ButtonSecondary";
+import FormItem from "@/shared/FormItem";
+import Input from "@/shared/Input/Input";
+import Radio from "@/shared/Radio/Radio";
 
 interface Props {
   isActive: boolean;
@@ -22,12 +22,12 @@ const PaymentMethod: FC<Props> = ({
   onCloseActive,
   onOpenActive,
 }) => {
-  const [methodActive, setMethodActive] = useState<'Credit-Card' | 'Wallet'>(
-    'Credit-Card',
+  const [methodActive, setMethodActive] = useState<"Credit-Card" | "Wallet">(
+    "Credit-Card"
   );
 
   const renderDebitCredit = () => {
-    const active = methodActive === 'Credit-Card';
+    const active = methodActive === "Credit-Card";
     return (
       <div className="flex items-start space-x-4 sm:space-x-6">
         <Radio
@@ -41,7 +41,7 @@ const PaymentMethod: FC<Props> = ({
           <div className="flex items-center space-x-4 sm:space-x-6">
             <div
               className={`rounded-xl border-2 p-2.5 ${
-                active ? 'border-primary' : 'border-neutral-300'
+                active ? "border-primary" : "border-neutral-300"
               }`}
             >
               <FaRegCreditCard className="text-3xl" />
@@ -51,7 +51,7 @@ const PaymentMethod: FC<Props> = ({
 
           <div
             className={`mb-4 mt-6 space-y-3 sm:space-y-5 ${
-              active ? 'block' : 'hidden'
+              active ? "block" : "hidden"
             }`}
           >
             <div className="max-w-lg">
@@ -107,7 +107,7 @@ const PaymentMethod: FC<Props> = ({
   };
 
   const renderWallet = () => {
-    const active = methodActive === 'Wallet';
+    const active = methodActive === "Wallet";
     return (
       <div className="flex items-start space-x-4 sm:space-x-6">
         <Radio
@@ -121,14 +121,14 @@ const PaymentMethod: FC<Props> = ({
           <div className="flex items-center space-x-4 sm:space-x-6 ">
             <div
               className={`rounded-xl border-2 p-2.5 ${
-                active ? 'border-primary' : 'border-neutral-300'
+                active ? "border-primary" : "border-neutral-300"
               }`}
             >
               <FaPaypal className="text-3xl" />
             </div>
             <p className="font-medium">Paypal</p>
           </div>
-          <div className={`mb-4 mt-6 space-y-6 ${active ? 'block' : 'hidden'}`}>
+          <div className={`mb-4 mt-6 space-y-6 ${active ? "block" : "hidden"}`}>
             <div className="max-w-lg">
               <FormItem label="PayPal email">
                 <Input
@@ -172,7 +172,7 @@ const PaymentMethod: FC<Props> = ({
 
       <div
         className={`space-y-6 border-t border-neutral-300 px-6 py-7 ${
-          isActive ? 'block' : 'hidden'
+          isActive ? "block" : "hidden"
         }`}
       >
         {/* ==================== */}

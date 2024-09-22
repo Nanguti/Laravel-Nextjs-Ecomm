@@ -1,23 +1,23 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import BlogCard from '@/components/BlogCard';
-import { blogs } from '@/data/content';
-import type { BlogType } from '@/data/types';
-import ButtonSecondary from '@/shared/Button/ButtonSecondary';
-import Heading from '@/shared/Heading/Heading';
+import BlogCard from "@/components/BlogCard";
+import { blogs } from "@/data/content";
+import type { BlogType } from "@/data/types";
+import ButtonSecondary from "@/shared/Button/ButtonSecondary";
+import Heading from "@/shared/Heading/Heading";
 
-const tags = ['All', 'Style', 'Fitting', 'General'];
+const tags = ["All", "Style", "Fitting", "General"];
 
 const SectionBlogs = () => {
-  const [activeTab, setActiveTab] = useState('All');
+  const [activeTab, setActiveTab] = useState("All");
   const [filteredBlogs, setFilteredBlogs] = useState<BlogType[]>(blogs);
 
   const handleClick = (tag: string) => {
     setActiveTab(tag);
 
-    if (tag === 'All') {
+    if (tag === "All") {
       setFilteredBlogs(blogs);
     } else {
       const filtered = blogs.filter((blog) => blog.tag === tag);
@@ -38,8 +38,8 @@ const SectionBlogs = () => {
               onClick={() => handleClick(tag)}
               className={`${
                 activeTab === tag
-                  ? 'bg-primary text-white'
-                  : 'border-2 border-primary text-primary'
+                  ? "bg-primary text-white"
+                  : "border-2 border-primary text-primary"
               }`}
             >
               {tag}

@@ -1,9 +1,9 @@
-import type { FC } from 'react';
-import React from 'react';
-import { MdStar } from 'react-icons/md';
+import type { FC } from "react";
+import React from "react";
+import { MdStar } from "react-icons/md";
 
-import Heading from '@/shared/Heading/Heading';
-import ProgressBar from '@/shared/ProgressBar/ProgressBar';
+import Heading from "@/shared/Heading/Heading";
+import ProgressBar from "@/shared/ProgressBar/ProgressBar";
 
 interface RatingsProps {
   rating: number;

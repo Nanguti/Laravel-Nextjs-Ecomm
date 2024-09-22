@@ -1,5 +1,5 @@
-import type { FC } from 'react';
-import React from 'react';
+import type { FC } from "react";
+import React from "react";
 
 interface ProgressBarProps {
   value: number;
@@ -7,7 +7,7 @@ interface ProgressBarProps {
 
 const ProgressBar: FC<ProgressBarProps> = ({ value }) => {
   return (
-    <div className="relative flex h-2 w-full overflow-hidden rounded-full bg-gray">
+    <div className="relative flex h-2 w-full overflow-hidden rounded-lg bg-gray">
       <div style={{ width: `${value}%` }} className="flex h-full bg-primary" />
     </div>
   );

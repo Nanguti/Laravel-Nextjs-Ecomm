@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import React from 'react';
+import { motion } from "framer-motion";
+import React from "react";
 
-import { faqsData } from '@/data/content';
-import Heading from '@/shared/Heading/Heading';
+import { faqsData } from "@/data/content";
+import Heading from "@/shared/Heading/Heading";
 
-import FAQtab from './FAQtab';
+import FAQtab from "./FAQtab";
 
 const page = () => {
   return (
-    <div className="container mb-32 mt-16">
+    <div className="container mb-16 mt-16">
       <Heading desc={faqsData.description} isCenter isMain>
         {faqsData.heading}
       </Heading>

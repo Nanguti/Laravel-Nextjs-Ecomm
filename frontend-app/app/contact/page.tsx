@@ -1,19 +1,19 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { pathOr } from 'ramda';
-import React from 'react';
+import Image from "next/image";
+import Link from "next/link";
+import { pathOr } from "ramda";
+import React from "react";
 
-import { contactSection } from '@/data/content';
-import ButtonCircle3 from '@/shared/Button/ButtonCircle3';
-import ButtonSecondary from '@/shared/Button/ButtonSecondary';
-import Heading from '@/shared/Heading/Heading';
+import { contactSection } from "@/data/content";
+import ButtonCircle3 from "@/shared/Button/ButtonCircle3";
+import ButtonSecondary from "@/shared/Button/ButtonSecondary";
+import Heading from "@/shared/Heading/Heading";
 
-import ContactForm from './ContactForm';
+import ContactForm from "./ContactForm";
 
 const page = () => {
   return (
     <div className="container">
-      <div className="mb-32 mt-20">
+      <div className="mb-16 mt-20">
         <Heading desc={contactSection.description} isMain isCenter>
           {contactSection.heading}
         </Heading>
@@ -23,7 +23,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="mb-32">
+      <div className="mb-16">
         <Heading
           desc={contactSection.directContactInfoHeader.description}
           isMain
@@ -45,7 +45,8 @@ const page = () => {
               <h2 className="text-2xl font-medium">{info.title}</h2>
               <p className="text-center text-neutral-500">{info.description}</p>
               <Link
-                className="border-b border-black py-2 text-2xl font-medium hover:border-primary hover:text-primary"
+                className="border-b border-black py-2 text-2xl font-medium 
+                hover:border-primary hover:text-primary"
                 href={info.contactLink.href}
               >
                 {info.contactLink.title}
@@ -55,7 +56,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="mb-32">
+      <div className="mb-16">
         <div className="mb-10 flex items-center justify-between">
           <h2 className="text-3xl font-semibold">Follow us on Instagram</h2>
           <ButtonSecondary className="border-2 border-primary text-primary">
@@ -79,7 +80,7 @@ const page = () => {
           </div>
           <div>
             <Image
-              src={pathOr('', ['instagramPhotos', 4], contactSection)}
+              src={pathOr("", ["instagramPhotos", 4], contactSection)}
               alt="instagram photo"
               className="h-full w-full object-cover object-center"
               width={1000}

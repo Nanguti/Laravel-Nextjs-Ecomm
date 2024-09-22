@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import React, { useState } from 'react';
-import { MdArrowBack } from 'react-icons/md';
+import Link from "next/link";
+import React, { useState } from "react";
+import { MdArrowBack } from "react-icons/md";
 
-import ButtonCircle3 from '@/shared/Button/ButtonCircle3';
+import ButtonCircle3 from "@/shared/Button/ButtonCircle3";
 
-const tabs = ['Home', 'Banner', 'New Arrival'];
+const tabs = ["Home", "Banner", "New Arrival"];
 
 const SectionNavigation = () => {
-  const [activeTab, setActiveTab] = useState('New Arrival');
+  const [activeTab, setActiveTab] = useState("New Arrival");
   return (
     <div className="my-10 flex items-center justify-between">
       <Link href="/">
@@ -25,7 +25,7 @@ const SectionNavigation = () => {
             type="button"
             onClick={() => setActiveTab(tab)}
             className={`${
-              activeTab === tab ? 'text-primary' : 'text-neutral-500'
+              activeTab === tab ? "text-primary" : "text-neutral-500"
             }`}
           >
             {tab}

@@ -1,11 +1,11 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import type { FC } from 'react';
-import React from 'react';
+import Image from "next/image";
+import Link from "next/link";
+import type { FC } from "react";
+import React from "react";
 
-import type { ProductType } from '@/data/types';
+import type { ProductType } from "@/data/types";
 
-import LikeButton from './LikeButton';
+import LikeButton from "./LikeButton";
 
 interface ProductCardProps {
   product: ProductType;
@@ -45,17 +45,17 @@ const ProductCard: FC<ProductCardProps> = ({
           <h3 className="font-semibold">{product.shoeName}</h3>
           <p
             className={`text-neutral-500 ${
-              showPrevPrice ? 'block' : 'hidden'
+              showPrevPrice ? "block" : "hidden"
             } text-sm line-through`}
           >
-            ${product.previousPrice}
+            KES {product.previousPrice}
           </p>
         </div>
 
         <div className="flex items-center justify-between">
           <p className="text-sm text-neutral-500">{product.shoeCategory}</p>
           <p className="text-lg font-medium text-primary">
-            ${product.currentPrice}
+            KES {product.currentPrice}
           </p>
         </div>
       </div>

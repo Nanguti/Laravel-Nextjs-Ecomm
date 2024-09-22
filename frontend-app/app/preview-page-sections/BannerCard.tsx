@@ -1,11 +1,11 @@
-import type { StaticImageData } from 'next/image';
-import Image from 'next/image';
-import type { FC } from 'react';
-import React from 'react';
-import { MdArrowForward } from 'react-icons/md';
+import type { StaticImageData } from "next/image";
+import Image from "next/image";
+import type { FC } from "react";
+import React from "react";
+import { MdArrowForward } from "react-icons/md";
 
-import Button from '@/shared/Button/Button';
-import ButtonPrimary from '@/shared/Button/ButtonPrimary';
+import Button from "@/shared/Button/Button";
+import ButtonPrimary from "@/shared/Button/ButtonPrimary";
 // import Logo from '@/shared/Logo/Logo';
 
 interface BannerCardProps {
@@ -36,7 +36,7 @@ const BannerCard: FC<BannerCardProps> = ({
         <h4 className="text-2xl font-medium">{details.heading}</h4>
         <p
           className={` ${
-            isSecondary ? 'text-neutral-200' : 'text-neutral-500'
+            isSecondary ? "text-neutral-200" : "text-neutral-500"
           }`}
         >
           {details.description}

@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import type { Route } from 'next';
-import Link from 'next/link';
-import type { ButtonHTMLAttributes, FC } from 'react';
-import React from 'react';
+import type { Route } from "next";
+import Link from "next/link";
+import type { ButtonHTMLAttributes, FC } from "react";
+import React from "react";
 
 export interface ButtonProps {
   className?: string;
@@ -12,17 +12,17 @@ export interface ButtonProps {
   fontSize?: string;
   loading?: boolean;
   disabled?: boolean;
-  type?: ButtonHTMLAttributes<HTMLButtonElement>['type'];
+  type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
   href?: Route;
   onClick?: () => void;
   children?: React.ReactNode;
 }
 
 const Button: FC<ButtonProps> = ({
-  className = 'text-neutral-200 disabled:cursor-not-allowed',
-  translate = '',
-  sizeClass = 'py-3 px-4 sm:py-3.5 sm:px-6',
-  fontSize = 'text-sm sm:text-base font-medium',
+  className = "text-neutral-200 disabled:cursor-not-allowed",
+  translate = "",
+  sizeClass = "py-3 px-4 sm:py-3.5 sm:px-6",
+  fontSize = "text-sm sm:text-base font-medium",
   disabled = false,
   href,
   children,
@@ -30,7 +30,7 @@ const Button: FC<ButtonProps> = ({
   loading,
   onClick = () => {},
 }) => {
-  const CLASSES = `relative h-auto inline-flex items-center justify-center rounded-full transition-colors ${fontSize} ${sizeClass} ${translate} ${className}`;
+  const CLASSES = `relative h-auto inline-flex items-center justify-center rounded-lg transition-colors ${fontSize} ${sizeClass} ${translate} ${className}`;
 
   const renderLoading = () => {
     return (
@@ -51,7 +51,8 @@ const Button: FC<ButtonProps> = ({
         <path
           className="opacity-75"
           fill="currentColor"
-          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 
+          12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
         />
       </svg>
     );

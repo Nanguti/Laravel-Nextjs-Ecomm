@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Accordion = ({ question, answer, wfull }: any) => {
   return (
     <div className="">
       <details
         className={`group ${
-          wfull ? 'w-full' : 'w-full max-w-2xl'
+          wfull ? "w-full" : "w-full max-w-2xl"
         } rounded-lg shadow-md`}
       >
         <summary className="flex w-full cursor-pointer list-none items-center gap-4 rounded-lg px-6 py-10">

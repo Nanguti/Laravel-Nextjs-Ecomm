@@ -1,21 +1,21 @@
-'use client';
+"use client";
 
-import { Dialog, Transition } from '@headlessui/react';
-import Image from 'next/image';
-import Link from 'next/link';
-import React, { Fragment, useState } from 'react';
-import { AiOutlineDelete } from 'react-icons/ai';
-import { FaBagShopping } from 'react-icons/fa6';
-import { MdClose, MdStar } from 'react-icons/md';
+import { Dialog, Transition } from "@headlessui/react";
+import Image from "next/image";
+import Link from "next/link";
+import React, { Fragment, useState } from "react";
+import { AiOutlineDelete } from "react-icons/ai";
+import { FaBagShopping } from "react-icons/fa6";
+import { MdClose, MdStar } from "react-icons/md";
 
-import { shoes } from '@/data/content';
-import type { ProductType } from '@/data/types';
-import ButtonCircle3 from '@/shared/Button/ButtonCircle3';
-import ButtonPrimary from '@/shared/Button/ButtonPrimary';
-import ButtonSecondary from '@/shared/Button/ButtonSecondary';
-import InputNumber from '@/shared/InputNumber/InputNumber';
+import { shoes } from "@/data/content";
+import type { ProductType } from "@/data/types";
+import ButtonCircle3 from "@/shared/Button/ButtonCircle3";
+import ButtonPrimary from "@/shared/Button/ButtonPrimary";
+import ButtonSecondary from "@/shared/Button/ButtonSecondary";
+import InputNumber from "@/shared/InputNumber/InputNumber";
 
-import LikeButton from './LikeButton';
+import LikeButton from "./LikeButton";
 
 export interface CartSideBarProps {}
 const CartSideBar: React.FC<CartSideBarProps> = () => {
@@ -86,7 +86,10 @@ const CartSideBar: React.FC<CartSideBarProps> = () => {
           className="fixed inset-0 z-50 overflow-y-auto"
           onClose={handleCloseMenu}
         >
-          <div className="z-max fixed inset-y-0 right-0 w-full max-w-md outline-none focus:outline-none md:max-w-md">
+          <div
+            className="z-max fixed inset-y-0 right-0 w-full max-w-md outline-none 
+          focus:outline-none md:max-w-md"
+          >
             <Transition.Child
               as={Fragment}
               enter="transition duration-100 transform"
@@ -164,7 +167,7 @@ const CartSideBar: React.FC<CartSideBarProps> = () => {
       <button
         type="button"
         onClick={handleOpenMenu}
-        className="mx-5 flex items-center gap-1 rounded-full bg-neutral-100 p-2 text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+        className="mx-5 flex items-center gap-1 rounded-lg bg-neutral-100 p-2 text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
       >
         <FaBagShopping className="text-2xl" />
         <span className="hidden text-sm lg:block">3 items</span>

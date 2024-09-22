@@ -1,19 +1,19 @@
-'use client';
+"use client";
 
-import { Menu, Transition } from '@headlessui/react';
-import { Fragment, useState } from 'react';
-import { MdKeyboardArrowDown } from 'react-icons/md';
+import { Menu, Transition } from "@headlessui/react";
+import { Fragment, useState } from "react";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
-const languages = ['English', 'Francias', 'Espanyol'];
+const languages = ["English", "Francias", "Espanyol"];
 
 const Language = () => {
-  const [language, setLanguage] = useState('English');
+  const [language, setLanguage] = useState("English");
   return (
     <div className="font-medium">
       <Menu as="div" className="relative inline-block">
         <Menu.Button className="flex items-center gap-1">
           <span>{language}</span>
-          <span className="flex h-4 w-4 items-center justify-center rounded-full border border-white">
+          <span className="flex h-4 w-4 items-center justify-center rounded-lg border border-white">
             <MdKeyboardArrowDown className="text-sm" />
           </span>
         </Menu.Button>

@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import Accordion from '@/components/Accordion';
-import { faqsData } from '@/data/content';
-import ButtonSecondary from '@/shared/Button/ButtonSecondary';
+import Accordion from "@/components/Accordion";
+import { faqsData } from "@/data/content";
+import ButtonSecondary from "@/shared/Button/ButtonSecondary";
 
 const FAQtab = () => {
-  const [activeTab, setActiveTab] = useState('Shipping');
+  const [activeTab, setActiveTab] = useState("Shipping");
 
   return (
     <div className="flex flex-col items-center justify-center space-y-10">
@@ -17,8 +17,8 @@ const FAQtab = () => {
             key={faq.category}
             className={`rounded-lg ${
               activeTab === faq.category
-                ? 'bg-primary text-white'
-                : 'bg-neutral-300 text-black dark:bg-neutral-100'
+                ? "bg-primary text-white"
+                : "bg-neutral-300 text-black dark:bg-neutral-100"
             }`}
             sizeClass="px-5 py-3"
             onClick={() => setActiveTab(faq.category)}
@@ -33,7 +33,7 @@ const FAQtab = () => {
           <div
             key={faq.category}
             className={`${
-              activeTab === faq.category ? 'block' : 'hidden'
+              activeTab === faq.category ? "block" : "hidden"
             } max-w-3xl space-y-10`}
           >
             {faq.data.map((faqData) => (

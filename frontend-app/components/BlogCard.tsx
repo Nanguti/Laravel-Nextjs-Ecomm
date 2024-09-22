@@ -1,19 +1,19 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import type { StaticImageData } from 'next/image';
-import Image from 'next/image';
-import Link from 'next/link';
-import type { FC } from 'react';
-import React from 'react';
-import { MdArrowForward } from 'react-icons/md';
+import { motion } from "framer-motion";
+import type { StaticImageData } from "next/image";
+import Image from "next/image";
+import Link from "next/link";
+import type { FC } from "react";
+import React from "react";
+import { MdArrowForward } from "react-icons/md";
 
 interface BlogCardProps {
   title: string;
   brief: string;
   date: string;
   coverImage: string | StaticImageData;
-  tag: 'Style' | 'Fitting' | 'General';
+  tag: "Style" | "Fitting" | "General";
   slug: string;
 }
 
@@ -27,11 +27,12 @@ const BlogCard: FC<BlogCardProps> = ({
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: '50%' }}
-      whileInView={{ opacity: 1, y: '0%' }}
+      initial={{ opacity: 0, y: "50%" }}
+      whileInView={{ opacity: 1, y: "0%" }}
       transition={{ duration: 0.5, delay: 0.3 }}
       viewport={{ once: true }}
-      className="relative h-[540px] space-y-5 overflow-hidden rounded-xl border border-neutral-300 p-3 shadow-md"
+      className="relative h-[540px] space-y-5 overflow-hidden rounded-xl border 
+      border-neutral-300 p-3 shadow-md"
     >
       <Link href={`/blog/${slug}`}>
         <div className="h-[220px] w-full overflow-hidden rounded-xl">

@@ -1,5 +1,5 @@
-import type { FC } from 'react';
-import React from 'react';
+import type { FC } from "react";
+import React from "react";
 
 export interface RadioProps {
   className?: string;
@@ -12,12 +12,12 @@ export interface RadioProps {
 }
 
 const Radio: FC<RadioProps> = ({
-  className = '',
+  className = "",
   name,
   id,
   onChange,
   label,
-  sizeClassName = 'w-6 h-6',
+  sizeClassName = "w-6 h-6",
   defaultChecked,
 }) => {
   return (
@@ -26,7 +26,7 @@ const Radio: FC<RadioProps> = ({
         id={id}
         name={name}
         type="radio"
-        className={`focus:ring-action-primary rounded-full border-neutral-400 bg-transparent text-primary hover:border-neutral-700  focus:ring-primary ${sizeClassName}`}
+        className={`focus:ring-action-primary rounded-lg border-neutral-400 bg-transparent text-primary hover:border-neutral-700  focus:ring-primary ${sizeClassName}`}
         onChange={(e) => onChange && onChange(e.target.value)}
         defaultChecked={defaultChecked}
         value={id}

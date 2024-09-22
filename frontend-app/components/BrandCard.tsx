@@ -1,11 +1,11 @@
-import type { StaticImageData } from 'next/image';
-import Image from 'next/image';
-import type { FC } from 'react';
-import React from 'react';
-import { MdStar } from 'react-icons/md';
-import { PiSealCheckFill } from 'react-icons/pi';
+import type { StaticImageData } from "next/image";
+import Image from "next/image";
+import type { FC } from "react";
+import React from "react";
+import { MdStar } from "react-icons/md";
+import { PiSealCheckFill } from "react-icons/pi";
 
-import ButtonSecondary from '@/shared/Button/ButtonSecondary';
+import ButtonSecondary from "@/shared/Button/ButtonSecondary";
 
 interface BrandCardProps {
   brandName: string;
@@ -44,7 +44,7 @@ const BrandCard: FC<BrandCardProps> = ({
             <div className="flex items-center gap-1">
               <MdStar className="text-yellow-400" />
               <p className="text-sm">
-                {rating}{' '}
+                {rating}{" "}
                 <span className="text-neutral-500">{`(${reviews} Reviews)`}</span>
               </p>
             </div>

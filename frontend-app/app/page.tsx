@@ -11,15 +11,15 @@ const page = () => {
         <SectionHeader />
       </div>
 
-      <div className="mb-32">
+      <div className="mb-16">
         <SectionBestDeals />
       </div>
 
-      <div className="mb-32">
+      <div className="mb-16">
         <SectionProducts />
       </div>
 
-      <div className="mb-32">
+      <div className="mb-16">
         <SectionBrands />
       </div>
     </div>

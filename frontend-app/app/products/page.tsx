@@ -1,14 +1,14 @@
-import React from 'react';
-import { LuFilter } from 'react-icons/lu';
-import { MdOutlineFilterList, MdSearch } from 'react-icons/md';
+import React from "react";
+import { LuFilter } from "react-icons/lu";
+import { MdOutlineFilterList, MdSearch } from "react-icons/md";
 
-import ProductCard from '@/components/ProductCard';
-import SidebarFilters from '@/components/SideBarFilter';
-import { shoes } from '@/data/content';
-import ButtonSecondary from '@/shared/Button/ButtonSecondary';
-import Input from '@/shared/Input/Input';
+import ProductCard from "@/components/ProductCard";
+import SidebarFilters from "@/components/SideBarFilter";
+import { shoes } from "@/data/content";
+import ButtonSecondary from "@/shared/Button/ButtonSecondary";
+import Input from "@/shared/Input/Input";
 
-import SectionBrands from '../home/SectionBrands';
+import SectionBrands from "../home/SectionBrands";
 
 const page = () => {
   return (
@@ -20,11 +20,11 @@ const page = () => {
         <div className="mb-10 shrink-0 border-t lg:mx-4 lg:mb-0 lg:border-t-0" />
         <div className="relative flex-1">
           <div className="top-32 z-10 mb-3 items-center gap-5 space-y-5 bg-white py-10 lg:sticky lg:flex lg:space-y-0">
-            <div className="flex flex-1 items-center gap-2 rounded-full border border-neutral-300 px-4">
+            <div className="flex flex-1 items-center gap-2 rounded-lg border border-neutral-300 px-4">
               <MdSearch className="text-2xl text-neutral-500" />
               <Input
                 type="password"
-                rounded="rounded-full"
+                rounded="rounded-lg"
                 placeholder="Search..."
                 sizeClass="h-12 px-0 py-3"
                 className="border-transparent bg-transparent placeholder:text-neutral-500 focus:border-transparent"

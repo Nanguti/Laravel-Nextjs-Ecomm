@@ -1,15 +1,15 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { AiOutlineDelete } from 'react-icons/ai';
-import { MdStar } from 'react-icons/md';
-import { TbBrandPaypal } from 'react-icons/tb';
+import Image from "next/image";
+import Link from "next/link";
+import { AiOutlineDelete } from "react-icons/ai";
+import { MdStar } from "react-icons/md";
+import { TbBrandPaypal } from "react-icons/tb";
 
-import LikeButton from '@/components/LikeButton';
-import { shoes } from '@/data/content';
-import type { ProductType } from '@/data/types';
-import ButtonPrimary from '@/shared/Button/ButtonPrimary';
-import ButtonSecondary from '@/shared/Button/ButtonSecondary';
-import InputNumber from '@/shared/InputNumber/InputNumber';
+import LikeButton from "@/components/LikeButton";
+import { shoes } from "@/data/content";
+import type { ProductType } from "@/data/types";
+import ButtonPrimary from "@/shared/Button/ButtonPrimary";
+import ButtonSecondary from "@/shared/Button/ButtonSecondary";
+import InputNumber from "@/shared/InputNumber/InputNumber";
 
 const renderProduct = (item: ProductType) => {
   const { shoeName, coverImage, currentPrice, slug, rating, shoeCategory } =
@@ -42,7 +42,7 @@ const renderProduct = (item: ProductType) => {
                 <span className="text-sm">{rating}</span>
               </div>
             </div>
-            <span className="font-medium md:text-xl">${currentPrice}</span>
+            <span className="font-medium md:text-xl">Kes{currentPrice}</span>
           </div>
         </div>
         <div className="flex w-full items-end justify-between text-sm">
@@ -82,7 +82,7 @@ const CartPage = () => {
               <div className="mt-7 divide-y divide-neutral-300 text-sm">
                 <div className="flex justify-between pb-4">
                   <span>Subtotal</span>
-                  <span className="font-semibold">$249.00</span>
+                  <span className="font-semibold">Kes 249.00</span>
                 </div>
                 <div className="flex justify-between py-4">
                   <span>Estimated Delivery & Handling</span>
@@ -90,11 +90,11 @@ const CartPage = () => {
                 </div>
                 <div className="flex justify-between py-4">
                   <span>Estimated taxes</span>
-                  <span className="font-semibold">$24.90</span>
+                  <span className="font-semibold">Kes24.90</span>
                 </div>
                 <div className="flex justify-between pt-4 text-base font-semibold">
                   <span>Total</span>
-                  <span>$276.00</span>
+                  <span>Kes 276.00</span>
                 </div>
               </div>
               <ButtonPrimary href="/checkout" className="mt-8 w-full">
