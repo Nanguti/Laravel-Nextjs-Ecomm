@@ -17,6 +17,8 @@ class Product extends Model
         'sort_when_creating' => true,
     ];
     protected $fillable = [
+        'meta_title',
+        'meta_description',
         'name',
         'product_code',
         'slug',

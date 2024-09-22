@@ -3,30 +3,24 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Image;
-use Laravel\Nova\Fields\Select;
-use Laravel\Nova\Fields\Slug;
-use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Category extends Resource
+class Brand extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Product\Category>
+     * @var class-string<\App\Models\Product\Brand>
      */
-    public static $model = \App\Models\Product\Category::class;
+    public static $model = \App\Models\Product\Brand::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -35,9 +29,6 @@ class Category extends Resource
      */
     public static $search = [
         'id',
-        'name',
-        'slug',
-        'description'
     ];
 
     /**
@@ -48,32 +39,8 @@ class Category extends Resource
      */
     public function fields(NovaRequest $request)
     {
-
         return [
             ID::make()->sortable(),
-            BelongsTo::make('Parent Category', 'parent', Category::class)
-                ->nullable(),
-            Text::make('Name')->required()->sortable(),
-            Slug::make('Slug')->from('Name')->sortable(),
-            Textarea::make('Summary')->required()->sortable(),
-            Textarea::make('Description')->required()->sortable(),
-            Image::make('Image Url')->required(),
-            Select::make('Status')
-                ->options([
-                    'active' => 'Active',
-                    'inactive' => 'Inactive',
-                ]),
-            Select::make('Is Popular')
-                ->options([
-                    '1' => 'Yes',
-                    '0' => 'No',
-                ]),
-            Select::make('Is Brand')
-                ->options([
-                    '1' => 'Yes',
-                    '0' => 'No',
-                ]),
-
         ];
     }
 

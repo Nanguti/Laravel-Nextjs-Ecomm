@@ -11,7 +11,7 @@ class Category extends Model
         'title',
         'slug',
         'summary',
-        'photo',
+        'image_url',
         'status',
         'is_parent',
         'parent_id',
