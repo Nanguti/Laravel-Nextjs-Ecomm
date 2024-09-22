@@ -14,9 +14,9 @@ class BlogCategory extends Resource
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\BlogCategory>
+     * @var class-string<\App\Models\Blog\BlogCategory>
      */
-    public static $model = \App\Models\BlogCategory::class;
+    public static $model = \App\Models\Blog\BlogCategory::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -31,7 +31,10 @@ class BlogCategory extends Resource
      * @var array
      */
     public static $search = [
-        'id','name', 'slug','description'
+        'id',
+        'name',
+        'slug',
+        'description'
     ];
 
     /**

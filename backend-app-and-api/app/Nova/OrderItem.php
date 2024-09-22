@@ -13,9 +13,9 @@ class OrderItem extends Resource
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\OrderItem>
+     * @var class-string<\App\Models\Order\OrderItem>
      */
-    public static $model = \App\Models\OrderItem::class;
+    public static $model = \App\Models\Order\OrderItem::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -30,7 +30,11 @@ class OrderItem extends Resource
      * @var array
      */
     public static $search = [
-        'id','order_id', 'product_id', 'quantity','price'
+        'id',
+        'order_id',
+        'product_id',
+        'quantity',
+        'price'
     ];
 
     /**

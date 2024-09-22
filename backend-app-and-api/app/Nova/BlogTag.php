@@ -13,9 +13,9 @@ class BlogTag extends Resource
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\BlogTag>
+     * @var class-string<\App\Models\Blog\BlogTag>
      */
-    public static $model = \App\Models\BlogTag::class;
+    public static $model = \App\Models\Blog\BlogTag::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -30,7 +30,9 @@ class BlogTag extends Resource
      * @var array
      */
     public static $search = [
-        'id','name', 'slug'
+        'id',
+        'name',
+        'slug'
     ];
 
     /**

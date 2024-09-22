@@ -12,9 +12,9 @@ class Wishlist extends Resource
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Wishlist>
+     * @var class-string<\App\Models\Customer\Wishlist>
      */
-    public static $model = \App\Models\Wishlist::class;
+    public static $model = \App\Models\Customer\Wishlist::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -29,7 +29,9 @@ class Wishlist extends Resource
      * @var array
      */
     public static $search = [
-        'id','user_id', 'product_id'
+        'id',
+        'user_id',
+        'product_id'
     ];
 
     /**

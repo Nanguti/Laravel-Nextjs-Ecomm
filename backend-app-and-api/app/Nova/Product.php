@@ -17,9 +17,9 @@ class Product extends Resource
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Product>
+     * @var class-string<\App\Models\Product\Product>
      */
-    public static $model = \App\Models\Product::class;
+    public static $model = \App\Models\Product\Product::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -34,7 +34,13 @@ class Product extends Resource
      * @var array
      */
     public static $search = [
-        'id','name','slug','category_id', 'description', 'price', 'stock'
+        'id',
+        'name',
+        'slug',
+        'category_id',
+        'description',
+        'price',
+        'stock'
     ];
 
     /**

@@ -13,9 +13,9 @@ class BlogComment extends Resource
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\BlogComment>
+     * @var class-string<\App\Models\Blog\BlogComment>
      */
-    public static $model = \App\Models\BlogComment::class;
+    public static $model = \App\Models\Blog\BlogComment::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -30,7 +30,10 @@ class BlogComment extends Resource
      * @var array
      */
     public static $search = [
-        'id','user_id', 'blog_post_id', 'content'
+        'id',
+        'user_id',
+        'blog_post_id',
+        'content'
     ];
 
     /**

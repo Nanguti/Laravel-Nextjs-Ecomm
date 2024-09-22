@@ -14,9 +14,9 @@ class BlogPost extends Resource
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\BlogPost>
+     * @var class-string<\App\Models\Blog\BlogPost>
      */
-    public static $model = \App\Models\BlogPost::class;
+    public static $model = \App\Models\Blog\BlogPost::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -32,7 +32,7 @@ class BlogPost extends Resource
      */
     public static $search = [
         'id',
-        'title', 
+        'title',
         'slug',
         'category_id',
         'author_id',

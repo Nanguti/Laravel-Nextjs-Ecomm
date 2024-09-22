@@ -14,9 +14,9 @@ class Category extends Resource
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Category>
+     * @var class-string<\App\Models\Product\Category>
      */
-    public static $model = \App\Models\Category::class;
+    public static $model = \App\Models\Product\Category::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -31,7 +31,10 @@ class Category extends Resource
      * @var array
      */
     public static $search = [
-        'id','name','slug','description'
+        'id',
+        'name',
+        'slug',
+        'description'
     ];
 
     /**

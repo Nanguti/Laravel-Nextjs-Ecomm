@@ -15,9 +15,9 @@ class Order extends Resource
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Order>
+     * @var class-string<\App\Models\Order\Order>
      */
-    public static $model = \App\Models\Order::class;
+    public static $model = \App\Models\Order\Order::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -32,7 +32,11 @@ class Order extends Resource
      * @var array
      */
     public static $search = [
-        'id','order_id','user_id', 'total_amount', 'status'
+        'id',
+        'order_id',
+        'user_id',
+        'total_amount',
+        'status'
     ];
 
     /**

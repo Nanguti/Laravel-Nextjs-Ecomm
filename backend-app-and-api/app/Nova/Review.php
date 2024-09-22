@@ -14,9 +14,9 @@ class Review extends Resource
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Review>
+     * @var class-string<\App\Models\Product\Review>
      */
-    public static $model = \App\Models\Review::class;
+    public static $model = \App\Models\Product\Review::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -31,7 +31,11 @@ class Review extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'user_id', 'product_id', 'rating','comment'
+        'id',
+        'user_id',
+        'product_id',
+        'rating',
+        'comment'
     ];
 
     /**

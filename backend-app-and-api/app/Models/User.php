@@ -3,6 +3,9 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use App\Models\Product\Review;
+use App\Nova\Wishlist;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -14,7 +17,7 @@ class User extends Authenticatable
 
     const ROLE_USER = 'user';
     const ROLE_ADMIN = 'admin';
-    
+
     use HasApiTokens, HasFactory, Notifiable, HasRoles;
 
     /**
@@ -48,13 +51,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function reviews(){
+    public function reviews()
+    {
         return $this->hasMany(Review::class);
     }
-    public function order(){
-        return $this->hasMany(Order::class);
-    }
-    public function whishlist(){
+    public function whishlist()
+    {
         return $this->hasMany(Wishlist::class);
     }
 }
