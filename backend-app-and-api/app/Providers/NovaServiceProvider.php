@@ -8,6 +8,7 @@ use App\Nova\BlogPost;
 use App\Nova\BlogTag;
 use App\Nova\Category;
 use App\Nova\Coupon;
+use App\Nova\Dashboards\Main;
 use App\Nova\Order;
 use App\Nova\OrderItem;
 use App\Nova\Product;
@@ -35,7 +36,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         Nova::mainMenu(function (Request $request) {
             return [
 
-                //MenuSection::dashboard(MainDashboard::class)->icon('chart-bar'),
+                MenuSection::dashboard(Main::class)->icon('chart-bar'),
 
                 MenuSection::make('User Management', [
                     MenuItem::resource(User::class),
@@ -45,7 +46,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                     MenuItem::resource(Category::class),
                     MenuItem::resource(Product::class),
                     MenuItem::resource(Review::class),
-                    MenuItem::resource(Wishlist::class),                                   
+                    MenuItem::resource(Wishlist::class),
                 ])->icon('document-text')->collapsable(),
 
                 MenuSection::make('Order Management', [
@@ -58,21 +59,20 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                     MenuItem::resource(BlogCategory::class),
                     MenuItem::resource(BlogPost::class),
                     MenuItem::resource(BlogTag::class),
-                    MenuItem::resource(BlogComment::class),                    
-               
+                    MenuItem::resource(BlogComment::class),
+
                 ])->icon('document-text')->collapsable(),
                 MenuSection::make('Roles & Permissions', [
-                    MenuItem::make('Roles',"/resources/roles"),
-                    MenuItem::make('Permissions',"/resources/permissions"),
+                    MenuItem::make('Roles', "/resources/roles"),
+                    MenuItem::make('Permissions', "/resources/permissions"),
                 ])->icon('lock-closed')->collapsable(),
-                
-                    
+
+
             ];
         });
-
+        Nova::style('custom-css', asset('assets/custom.css'));
         Nova::style('prism-css', asset('assets/prism.css'));
         Nova::script('prism-js', asset('assets/prism.js'));
-        
     }
 
     /**
@@ -83,9 +83,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function routes()
     {
         Nova::routes()
-                ->withAuthenticationRoutes()
-                ->withPasswordResetRoutes()
-                ->register();
+            ->withAuthenticationRoutes()
+            ->withPasswordResetRoutes()
+            ->register();
     }
 
     /**
@@ -112,7 +112,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function dashboards()
     {
         return [
-            new \App\Nova\Dashboards\Main,
+            new Main,
         ];
     }
 
@@ -124,7 +124,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     public function tools()
     {
         return [
-           \Vyuldashev\NovaPermission\NovaPermissionTool::make(),
+            \Vyuldashev\NovaPermission\NovaPermissionTool::make(),
         ];
     }
 

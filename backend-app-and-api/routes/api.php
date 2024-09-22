@@ -29,11 +29,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // ProductController Routes
 Route::get('products', [ProductController::class, 'index']);
 Route::get('products/{id}', [ProductController::class, 'show']);
-Route::middleware('auth:api')->group(function () {
-    Route::post('products', [ProductController::class, 'store']);
-    Route::put('products/{id}', [ProductController::class, 'update']);
-    Route::delete('products/{id}', [ProductController::class, 'destroy']);
-});
 
 // CartController Routes
 Route::middleware('auth:api')->group(function () {
@@ -53,44 +48,20 @@ Route::middleware('auth:api')->group(function () {
 // PostController Routes
 Route::get('posts', [PostController::class, 'index']);
 Route::get('posts/{id}', [PostController::class, 'show']);
-Route::middleware('auth:api')->group(function () {
-    Route::post('posts', [PostController::class, 'store']);
-    Route::put('posts/{id}', [PostController::class, 'update']);
-    Route::delete('posts/{id}', [PostController::class, 'destroy']);
-});
 
 // FAQController Routes
 Route::get('faqs', [FaqController::class, 'index']);
 Route::get('faqs/{id}', [FaqController::class, 'show']);
-Route::middleware('auth:api')->group(function () {
-    Route::post('faqs', [FaqController::class, 'store']);
-    Route::put('faqs/{id}', [FaqController::class, 'update']);
-    Route::delete('faqs/{id}', [FaqController::class, 'destroy']);
-});
+
 
 // PromotionalCodeController Routes
 Route::get('promotional-codes', [PromotionalCodeController::class, 'index']);
 Route::get('promotional-codes/{id}', [PromotionalCodeController::class, 'show']);
-Route::middleware('auth:api')->group(function () {
-    Route::post('promotional-codes', [PromotionalCodeController::class, 'store']);
-    Route::put('promotional-codes/{id}', [PromotionalCodeController::class, 'update']);
-    Route::delete('promotional-codes/{id}', [PromotionalCodeController::class, 'destroy']);
-});
 
 // DiscountController Routes
 Route::get('discounts', [DiscountController::class, 'index']);
 Route::get('discounts/{id}', [DiscountController::class, 'show']);
-Route::middleware('auth:api')->group(function () {
-    Route::post('discounts', [DiscountController::class, 'store']);
-    Route::put('discounts/{id}', [DiscountController::class, 'update']);
-    Route::delete('discounts/{id}', [DiscountController::class, 'destroy']);
-});
 
 // ReviewController Routes
 Route::get('reviews', [ReviewController::class, 'index']);
 Route::get('reviews/{id}', [ReviewController::class, 'show']);
-Route::middleware('auth:api')->group(function () {
-    Route::post('reviews', [ReviewController::class, 'store']);
-    Route::put('reviews/{id}', [ReviewController::class, 'update']);
-    Route::delete('reviews/{id}', [ReviewController::class, 'destroy']);
-});

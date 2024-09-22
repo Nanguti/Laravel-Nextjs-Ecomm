@@ -18,8 +18,6 @@ class ProductController extends Controller
         $products = ProductProduct::with([
             'category',
             'brand',
-            'images',
-            'specifications'
         ])->get();
         return response()->json($products);
     }
@@ -30,8 +28,6 @@ class ProductController extends Controller
         $product = ProductProduct::with([
             'category',
             'brand',
-            'images',
-            'specifications',
             'reviews'
         ])->findOrFail($id);
         return response()->json($product);
